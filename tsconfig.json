@@ -5,6 +5,7 @@
     "target": "ES2022",
     "sourceMap": true,
     "outDir": "dist",
+    "rootDir": "./",
     "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*.ts", "index.ts"],
