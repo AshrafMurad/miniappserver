@@ -1,11 +1,11 @@
-import app from "./src/app.js"
-import { databaseConnection } from "./src/db/connection.js"
+import app from "./app.js"
+import { databaseConnection } from "./db/connection.js"
 
 const PORT = process.env.PORT || 5000;
-
-databaseConnection()
- .then(() => {
+  
+databaseConnection()  
+ .then(() => { 
     console.log('Connected to MongoDB');
     app.listen(PORT, () => console.log(`Server is running 👌 on port ${PORT}`));
   })
-  .catch((err) => console.log(err));
+  .catch((err) => console.log(err));      
