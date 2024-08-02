@@ -4,9 +4,7 @@ import {loginValidator, signupValidator, validate} from '../utils/validation.js'
 import { verifyToken } from '../utils/token-manager.js'
 const userRoutes = Router()
 
-userRoutes.get('/', (req, res) => {
-  res.send('User endpoint');
-});
+userRoutes.get('/', getAllUSers);
 
 userRoutes.post('/signup',validate(signupValidator), signupUser)
 userRoutes.post('/login',validate(loginValidator), loginUser)
