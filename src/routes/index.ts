@@ -9,5 +9,6 @@ appRouter.get('/', (req, res) => {
   res.send('api');
 });
 
-
+appRouter.use('/users', userRoutes);
+appRouter.use('/clicks', clicksRoute);
 export default appRouter;
