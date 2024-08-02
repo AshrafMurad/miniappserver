@@ -13,4 +13,4 @@ userRoutes.post('/login',validate(loginValidator), loginUser)
 userRoutes.get('/auth-status', verifyToken,verifyUser)
 userRoutes.get('/logout', verifyToken, userLogout)
 
-export default userRoutes 
+export default userRoutes ;
