@@ -4,8 +4,6 @@ import clicksRoute from './clicks-route.js';
 
 const appRouter = Router()
 
-appRouter.use('/user', userRoutes)
-
 
 appRouter.get('/', (req, res) => {
   res.send('api');
