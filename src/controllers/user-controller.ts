@@ -35,6 +35,7 @@ export const signupUser = async (req: Request, res: Response, next) => {
       path: "/",
       expires,
       httpOnly: true,
+
     });
 
     return res
