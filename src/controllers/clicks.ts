@@ -21,7 +21,7 @@ export const updateClicksCount = async (req: Request, res: Response, next: nextF
 export const getUserClicks = async(req: Request, res: Response, next: nextFunction) =>{
   try{
     const user = await User.findById(res.locals.jwtData.id)
-    return res.status(200).json({message : 'ok', points: user.totalClicks, username: user.name})
+    return res.status(200).json(user.totalClicks)
   } catch(err){
     
   }
