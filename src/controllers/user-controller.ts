@@ -36,7 +36,6 @@ export const signupUser = async (req: Request, res: Response, next) => {
       expires,
       httpOnly: true,
       signed: true,
-      secure: true,
     });
 
     return res
@@ -76,7 +75,6 @@ export const loginUser = async (req: Request, res: Response, next) => {
       expires,
       httpOnly: true,
       signed: true,
-      secure: true,
     });
     return res
       .status(200)
