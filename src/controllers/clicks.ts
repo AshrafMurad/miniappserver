@@ -29,7 +29,7 @@ export const getUserClicks = async(req: Request, res: Response, next: nextFuncti
 export const getLeaderBoard = async(req: Request, res: Response, next: nextFunction) =>{
   try{
     const users: IUser[] = await User.find().select('name totalClicks').sort({totalClicks: -1}).limit(10)
-    return res.status(200).json(users )
+    return res.status(200).json(users)
   } catch(err){
   }
 }
