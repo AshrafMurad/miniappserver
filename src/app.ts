@@ -8,7 +8,7 @@ config()
 
 ////
 const app = express()
-app.use(cors({origin: 'https://miniapp-sable.vercel.app/', credentials: true}))
+app.use(cors({origin: 'https://miniapp-sable.vercel.app/', credentials: true, optionsSuccessStatus: 200}))
 app.use(express.json())
 app.use(morgan('dev'))
 app.use(cookieParser(process.env.COOKIE_SECRET))
