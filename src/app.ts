@@ -16,7 +16,7 @@ app.use(cookieParser(process.env.COOKIE_SECRET))
 app.get('/', (req, res) => {
   res.send('Welcome to the Express app!');
 });
-app.use('/api', appRouter)
+app.use('/api', appRouter) 
 
 
 
