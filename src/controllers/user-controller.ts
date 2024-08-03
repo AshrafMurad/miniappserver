@@ -27,7 +27,7 @@ export const signupUser = async(req: Request, res: Response, next) =>{
 
     res.clearCookie(COOKIE_NAME , {
       httpOnly: true,
-      domain: 'https://miniapp-api-bay.vercel.app/',
+      domain: 'https://miniapp-api-bay.vercel.app',
       signed: true,
       path: '/'
     })
