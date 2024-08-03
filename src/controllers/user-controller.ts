@@ -39,7 +39,8 @@ export const signupUser = async(req: Request, res: Response, next) =>{
       domain: 'https://miniapp-api-bay.vercel.app/',
       expires,
       httpOnly: true,
-      signed: true
+      signed: true,
+      sameSite: 'None'
     })
 
     return res.status(200).json({message: 'User created successfully', name: user.name, email: user.email})
@@ -62,7 +63,7 @@ export const loginUser = async(req:Request, res:Response, next) =>{
     }
     res.clearCookie(COOKIE_NAME , {
       httpOnly: true,
-      domain: 'localhost',
+      domain: 'miniapp-api-bay.vercel.app',
       signed: true,
       path: '/'
     })
@@ -71,10 +72,11 @@ export const loginUser = async(req:Request, res:Response, next) =>{
     expires.setDate(expires.getDate() + 7)
     res.cookie(COOKIE_NAME, token, {
       path:'/',
-      domain: 'https://miniapp-api-bay.vercel.app/',
+      domain: 'miniapp-api-bay.vercel.app',
       expires,
       httpOnly: true,
-      signed: true
+      signed: true,
+      sameSite: 'None'
     })
     return res.status(200).json({message: "OK", name: user.name, email: user.email})
   } catch(err) {
@@ -109,7 +111,7 @@ export const userLogout = async(req:Request, res:Response, next) =>{
     } 
     res.clearCookie(COOKIE_NAME , {
       httpOnly: true,
-      domain: 'https://miniapp-api-bay.vercel.app/',
+      domain: 'miniapp-api-bay.vercel.app',
       signed: true,
       path: '/'
     })
